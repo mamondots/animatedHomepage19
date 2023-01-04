@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+.container{
+    position: relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+header{
+    position: relative;
+    width:100%;
+    padding:40px 120px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index:2;
+}
+.logo a{
+    text-decoration:none;
+    font-size:20px;
+    text-transform: uppercase;
+    color:rgb(0,0,0);
+    font-weight:700;
+}
+.menu ul{
+    position: relative;
+    display:flex;
+}
+.menu ul li{
+    list-style:none;
+    transition:0.3s;
+    transform:scale(1);
+}
+.menu ul li:hover{
+    transform:scale(0.8);
+}
+.menu ul li a{
+    text-decoration:none;
+    font-size: 14px;
+    color:#000;
+    text-transform: uppercase;
+    margin:0 18px;
+    cursor: pointer;
+    transition:0.3s;
+}
+.menu ul li a:hover{
+    transform:scale(0.8);
+    color:#fff;
+}
+.swiper{
+    position: absolute;
+    top:0vh;
+    left:0vh;
+    width:100%;
+    height:100vh;
+}
+.swiper-slide{
+    position: relative;
+    width:100%;
+    height:100vh;
+    background-image:linear-gradient(90deg,#deac57, #deba7a);
+}
+.slide02{
+    background-image:linear-gradient(90deg,#ffe2d0, #ffebdf);
+}
+.slide03{
+    background-image:linear-gradient(90deg,#000000, #000000);
+}
+.slideContent{
+    position: relative;
+    top:30vh;
+    padding:0 120px;
+    display:flex;
+}
+.slideInfo{
+    position: relative;
+    left:20vh;
+}
+.slideInfo .erroe{
+    text-transform: capitalize;
+    font-size:18px;
+    color:#262626;
+}
+.slideInfo h1{
+    font-size:5.5rem;
+    font-weight:700;
+    color:#262626;
+    text-transform: capitalize;
+}
+.slideInfo .text{
+    padding-top:12px;
+    font-size:18px;
+    color:#262626;
+    line-height:1.5;
+}
+.slideInfo .btn{
+    position: relative;
+    top:30px;
+}
+.slideInfo .btn a{
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:12px;
+    font-weight:600;
+    padding:12px 30px;
+    border-radius:25px;
+    background-color:#262626;
+    color:#fff;
+    border:1px solid #262626;
+    cursor: pointer;
+    transition:0.3s;
+}
+.slideInfo .btn a:hover{
+    background-color:transparent;
+    color:#262626;
+}
+.imgContent{
+    position: absolute;
+    right:30vh;
+}
+.mainImg{
+    position: relative;
+    top:-12vh;
+    animation:img 5s linear infinite;   
+}
+@keyframes img{
+    0%{
+        transform:translateY(10px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(10px);
+    }
+}
+.mainImg img{
+    width:65%;
+}
+.shedow{
+    position: relative;
+    top:-10vh;
+}
+.shedow img{
+    width:60%;
+}
+.slide2Content{
+    position: relative;
+}
+.slideinfo2{
+    position: absolute;
+    top:10vh;
+    left:25%;
+    transform:translate(-50%,-50%);
+    display:flex;
+}
+.slideinfo2 h1{
+    font-size:20rem;
+    font-weight:900;
+    color:#bc5620;
+}
+.slideinfo2 h1:nth-child(1){
+    position: relative;
+    left:38px;
+}
+.slideinfo2 .last{
+    position: relative;
+    left:-40px;
+    z-index:2;
+}
+.slideinfo2 img{
+    width:50%;
+    z-index:2;
+    animation:img 5s linear infinite;
+}
+.slide2Detils{
+    position: absolute;
+    top:75vh;
+    left:68vh;
+    text-align:center;
+}
+.slide2Detils h1{
+    font-size:23px;
+    font-weight:500;
+    color:rgb(79,13,13);
+}
+.slide2Detils h2{
+    font-size:22px;
+    color:#c16f44;
+    font-weight:600;
+    padding-top:8px;
+}
+.slide2Detils .slide2Btn{
+    position: relative;
+    top:28px;
+}
+.slide2Detils .slide2Btn a{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    text-transform: uppercase;
+    padding:12px 35px;
+    background-color:#542e1a;
+    border-radius:25px;
+    border:1px solid rgba(0,0,0,0);
+    color:#fff;
+    letter-spacing:1px;
+    cursor: pointer;
+    transition:0.3s;
+}
+.slide2Detils .slide2Btn a:hover{
+    background-color:transparent;
+    color:#262626;
+    border:1px solid rgba(0,0,0,1);
+}
+.slide3Content{
+    position: relative;
+}
+.circleBox{
+    position: absolute;
+    top:15vh;
+    left:25%;
+}
+.circleBox video{
+    width:50%;
+}
+.circleBox h1{
+    position: absolute;
+    top:-15vh;
+    left:52vh;
+    font-size:25rem;
+    font-family:900;
+    color:#ccd1d1;
+}
+.slide3Info{
+    position: absolute;
+    top:80vh;
+    left:70vh;
+    text-align:center;
+}
+.slide3Info h3{
+    color:#fadb5e;
+    font-size:20px;
+}
+.slide3Btn a{
+    position: relative;
+    top:30px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+    text-transform: uppercase;
+    padding:12px 35px;
+    background-color:transparent;
+    border-radius:25px;
+    border:1px solid #fadb5e;
+    color:#fff;
+    letter-spacing:1px;
+    cursor: pointer;
+    transition:0.3s;
+}
+.slide3Btn a:hover{
+    background-color:#fadb5e;
+    color:#262626;
+}
+.arrows .arrow{
+    color:#542e1a;
+    font-size:18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:0.3s;
+}
+.arrows .arrow:hover{
+    transform:scale(0.8);
+}
+.arrows .arrow::after{
+    display:none;
+}
+.swiper-button-next{
+    position: absolute;
+    top:85vh;
+    right:15vh;
+}
+.swiper-button-prev{
+    position: absolute;
+    top:85vh;
+    left:15vh;
+}

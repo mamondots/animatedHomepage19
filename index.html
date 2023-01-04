@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/910ce80589.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>404 page Design</title>
+</head>
+<body>
+     <div class="container">
+        <header>
+             <div class="logo">
+                 <a href="">mamondots</a>
+             </div>
+             <div class="menu">
+                 <ul>
+                    <li><a href="">about</a></li>
+                    <li><a href="">contact</a></li>
+                 </ul>
+             </div>
+        </header>
+        <div class="swiper">
+             <div class="swiper-wrapper">
+                 <div class="swiper-slide slide01">
+                    <div class="slideContent">
+                         <div class="slideInfo">
+                             <p class="erroe">error 404</p>
+                             <h1>hey buddy</h1>
+                             <p class="text">
+                                We can't seen to find the page<br> you are looking for.
+                             </p>
+                             <div class="btn">
+                                 <a href="">go home</a>
+                             </div>
+                         </div>
+                         <div class="imgContent">
+                             <div class="mainImg">
+                                 <img src="img/ghost.webp">
+                             </div>
+                             <div class="shedow">
+                                 <img src="img/shadow1.png">
+                             </div>
+                         </div>
+                    </div>
+                 </div>
+
+                 <div class="swiper-slide slide02">
+                    <div class="slide2Content">
+                         <div class="slideinfo2">
+                             <h1>4</h1>
+                             <img src="img/dog.webp">
+                             <h1 class="last">4</h1>
+                         </div>
+                         <div class="slide2Detils">
+                             <h1>Well, this is awkward. There's nothing to see here</h1>
+                             <h2>(Except for this Handsome Dog)</h2>
+                             <div class="slide2Btn">
+                                 <a href="">back to homepage</a>
+                             </div>
+                         </div>
+                    </div>
+                 </div>
+
+                 <div class="swiper-slide slide03">
+                    <div class="slide3Content">
+                         <div class="circleBox">
+                             <video src="video/mag2glass.mp4" autoplay loop muted></video>
+                             <h1>ps</h1>
+                         </div>
+                         <div class="slide3Info">
+                             <h3>Sorry, but we did not find the page you were looking for.</h3>
+                             <div class="slide3Btn">
+                                <a href="">back to homepage</a>
+                            </div>
+                         </div>
+                    </div>
+                 </div>
+
+
+             </div>
+             <div class="arrows">
+                 <div class="swiper-button-next arrow">next</div>
+                 <div class="swiper-button-prev arrow">prev</div>
+             </div>
+        </div>
+     </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper",{
+        loop:true,
+        speed:1200,
+        effect:"fade",
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+        let animation = anime({
+            targets:'header',
+            translateY:[-80,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine'
+        });
+
+        anime({
+            targets:'.slideInfo',
+            translateX:[-150,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        anime({
+            targets:'.imgContent',
+            translateX:[150,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+        });
+
+        swiper.on('slideChangeTransitionStart',function(){
+
+            anime({
+            targets:'.slideInfo',
+            translateX:[-150,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+            anime({
+            targets:'.imgContent',
+            translateX:[150,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+            anime({
+            targets:'.slideinfo2',
+            translateX:[180,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+            anime({
+            targets:'.slide2Detils',
+            translateX:[-180,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+            anime({
+            targets:'.circleBox',
+            translateX:[180,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+            anime({
+            targets:'.slide3Info',
+            translateX:[-180,0],
+            opacity:[0,1],
+            duration:800,
+            easing:'easeInOutSine',
+            delay:500
+            });
+
+
+            });
+
+
+</script>
+</body>
+</html>
